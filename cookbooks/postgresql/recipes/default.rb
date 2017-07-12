@@ -6,7 +6,7 @@
 #
 
 package 'postgresql-server' do
-notifies 'execute[postgresql-init]'
+notifies :start, 'execute[postgresql-init]'
 end
 
 execute 'postgresql-init' do
